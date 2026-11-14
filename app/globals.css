@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  body {
+    @apply bg-cream font-sans text-ink antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-serif font-light;
+    font-variation-settings: "opsz" 96;
+  }
+  em {
+    font-style: italic;
+  }
+  :focus-visible {
+    outline: 2px solid #a67c3d;
+    outline-offset: 3px;
+  }
+}
