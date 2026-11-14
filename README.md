@@ -1,6 +1,6 @@
-# Atelier Zélium — clone Next.js
+# Atelier Zélium 
 
-Clone de https://zelium-wood-craft.base44.app : Next.js (App Router), TypeScript, Tailwind v3. Polices auto-hébergées (Fraunces + Inter via fontsource), aucune requête vers Google Fonts.
+[demo](https://atelier-zelium-sand.vercel.app/) : Next.js (App Router), TypeScript, Tailwind v3. Polices auto-hébergées (Fraunces + Inter via fontsource), aucune requête vers Google Fonts.
 
 ```bash
 npm install
