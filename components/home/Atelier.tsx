@@ -9,13 +9,28 @@ const included = [
   "Espace bureau et coworking sur place",
 ];
 
+const photos = [
+  ["production", "Production", "Tables de travail et personne dans l’atelier"],
+  ["raz", "Rez-de-chaussée", "Charpente et volume fermé au rez-de-chaussée"],
+  ["atelier", "Atelier", "Vue intérieure de l’atelier sous la charpente"],
+  ["coworking", "Coworking", "Espaces de bureaux derrière des cloisons vitrées rouges"],
+  ["exterieur", "Extérieur", "Façade et grande ouverture de l’atelier depuis la rue"],
+  ["hall", "Hall", "Hall avec escalier à gauche et ouvertures"],
+  ["premier-etage", "Premier étage", "Bureaux vitrés en hauteur sous la charpente"],
+];
+
 export function Atelier() {
   return (
     <section id="atelier" className="scroll-mt-20 bg-ink py-24 text-cream md:py-28">
       <Container>
         <div className="grid items-center gap-12 md:grid-cols-[6fr_6fr] md:gap-16">
-          <div className="relative aspect-[4/3] overflow-hidden">
-            <Image src="/images/atelier.jpg" alt="Trois personnes au travail sur des établis dans l'atelier" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+          <div className="border-l border-cream/20 pl-6 md:pl-8">
+            <Eyebrow className="!text-cream/50">Une charpente, une histoire</Eyebrow>
+            <h3 className="mt-6 max-w-[12em] text-3xl leading-tight">Un ancien entrepôt devenu lieu de fabrication.</h3>
+            <div className="mt-6 space-y-5 leading-[1.75] text-cream/75">
+              <p>La réhabilitation de ce vieil entrepôt, tour à tour atelier de charpentier puis hangar de stockage, met en valeur la vieille charpente existante. Le volume qu’elle abrite reçoit aujourd’hui l’atelier et les machines : la structure ancienne reste au cœur du lieu de travail.</p>
+              <p>Entre l’entrepôt et la rue, un petit bâtiment initialement en rez-de-chaussée sert de quai de chargement. Il a été rehaussé de bureaux de conception, reliant ainsi les espaces où les projets se dessinent à ceux où ils se fabriquent.</p>
+            </div>
           </div>
           <div>
             <Eyebrow className="!text-cream/50">L'atelier, à la demande</Eyebrow>
@@ -31,6 +46,23 @@ export function Atelier() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+
+        <div className="mt-14 border-t border-cream/15 pt-10">
+          <h3 className="text-2xl">Des espaces pour les outils et les idées.</h3>
+          <div className="mt-5 grid gap-5 leading-relaxed text-cream/75 md:grid-cols-2 md:gap-12">
+            <p>Au rez-de-chaussée, un parc de machines est mis à disposition, avec des établis et des espaces de stockage pour les métiers du bois, de l’acier et du fer. Les postes de travail et les rangements prennent place dans le volume de l’atelier.</p>
+            <p>À l’étage, des bureaux fermés accueillent les coworkers et leurs ordinateurs, photographies, montres et dessins. La conception et la fabrication trouvent chacune leur espace, sans quitter ce lieu partagé.</p>
+          </div>
+          <p className="mt-8 text-xs text-cream/55">Photographies du lieu fournies par l’atelier — vues d’ensemble en petit format.</p>
+          <div className="mt-5 grid max-w-[42rem] grid-cols-2 gap-x-5 gap-y-6 sm:grid-cols-3 md:grid-cols-4">
+            {photos.map(([id, label, alt]) => (
+              <figure key={id} className="min-w-0">
+                <Image src={`/images/${id}.jpg`} alt={alt} width={128} height={85} sizes="128px" loading="lazy" className="h-auto w-full max-w-[128px] object-contain" />
+                <figcaption className="mt-3 text-[10px] uppercase tracking-[0.12em] text-cream/70">{label}</figcaption>
+              </figure>
+            ))}
           </div>
         </div>
 
