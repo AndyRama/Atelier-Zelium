@@ -1,0 +1,26 @@
+[
+  {
+    "before": "import { navLinks } from \"@/lib/site\";\n",
+    "after": "import { navLinks, site } from \"@/lib/site\";\n\nexport function phoneHref(phone: string): string | undefined {\n  if (!/^0[1-9](?:[ .-]?\\d{2}){4}$/.test(phone)) return undefined;\n  return `tel:+33${phone.replace(/[ .-]/g, \"\").slice(1)}`;\n}\n"
+  },
+  {
+    "before": "  const overHero = pathname === \"/\" && !scrolled && !open;\n\n",
+    "after": "  const overHero = pathname === \"/\" && !scrolled && !open;\n\n  const telephone = phoneHref(site.phone);\n\n"
+  },
+  {
+    "before": "  return (\n",
+    "after": "  return (\n    <>\n"
+  },
+  {
+    "before": "        <nav id=\"menu-mobile\" aria-label=\"Navigation mobile\" className=\"border-t border-line bg-cream px-6 pb-8 pt-4 text-ink lg:hidden\">\n",
+    "after": "        <nav id=\"menu-mobile\" aria-label=\"Navigation mobile\" className=\"mobile-navigation overflow-y-auto border-t border-line bg-cream px-6 pb-8 pt-4 text-ink lg:hidden\">\n"
+  },
+  {
+    "before": "          <Link\n            href=\"/#contact\"\n            className=\"mt-6 inline-block bg-ink px-6 py-3.5 text-[11px] font-medium uppercase tracking-[0.16em] text-cream\"\n          >\n            Demander un devis ↗\n          </Link>\n",
+    "after": ""
+  },
+  {
+    "before": "    </header>\n",
+    "after": "    </header>\n    <nav aria-label=\"Actions mobiles\" className=\"mobile-actions fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 gap-3 border-t border-line bg-cream px-4 pt-3 text-[11px] font-medium lg:hidden\">\n      <Link href=\"/#contact\" onClick={() => setOpen(false)} className=\"flex min-h-12 items-center justify-center rounded-md bg-ink px-3 text-cream\">RDV atelier</Link>\n      {telephone ? (\n        <a href={telephone} className=\"flex min-h-12 items-center justify-center rounded-md border border-ink px-3 text-ink\">Téléphone</a>\n      ) : (\n        <button type=\"button\" disabled aria-label=\"Numéro à venir\" title=\"Numéro à venir\" className=\"flex min-h-12 flex-col items-center justify-center rounded-md border border-line px-3 text-ink/60\">\n          Téléphone <span className=\"text-[10px]\">{site.phone}</span>\n        </button>\n      )}\n    </nav>\n    </>\n"
+  }
+]

@@ -28,3 +28,12 @@
     outline-offset: 3px;
   }
 }
+
+/* Reserve the entire mobile dock, including the device inset. */
+@media (max-width: 1023px) {
+  :root { --mobile-actions-height: calc(73px + env(safe-area-inset-bottom, 0px)); }
+  body { padding-bottom: var(--mobile-actions-height); }
+  .mobile-actions { padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px)); }
+  .mobile-navigation { max-height: calc(100dvh - 80px - var(--mobile-actions-height)); }
+  #contact { scroll-margin-top: 96px; }
+}

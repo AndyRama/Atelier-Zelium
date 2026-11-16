@@ -33,7 +33,30 @@ const words = html => text(html).split(/\s+/).length;
 const homepage = () => render('app/page.tsx','default');
 test('préserve exactement les sources hors périmètre et les octets des photos fournies',()=>{
  const allowed = new Set(['app/page.tsx','components/home/Atelier.tsx','components/home/Equipe.tsx']);
- for(const [p,h] of Object.entries(original.hashes)) if(!allowed.has(p)) assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,p))).digest('hex'),h,p);
+ const mobileBase = require('./fixtures/mobile-actions-base.json');
+ for(const [p,h] of Object.entries(original.hashes)) if(!allowed.has(p)) {
+   let bytes=fs.readFileSync(path.join(root,p));
+   if(p === 'components/Header.tsx') {
+     assert.equal(crypto.createHash('sha256').update(mobileBase[p]).digest('hex'),h,'authentic Header baseline');
+     let expected=mobileBase[p];
+     for(const edit of require('./fixtures/mobile-actions-header-edits.json')) {
+       assert.equal(expected.split(edit.before).length,2,'unique authorized Header edit');
+       expected=expected.replace(edit.before,edit.after);
+     }
+     assert.equal(bytes.toString(),expected,'only exact mobile Header changes');
+     bytes=Buffer.from(mobileBase[p]);
+   }
+   if(p === 'lib/site.ts') {
+     assert.equal(bytes.toString(),mobileBase[p].replace('phone: "[À COMPLÉTER]"','phone: "06 ..."'),'only authorized phone placeholder');
+     bytes=Buffer.from(mobileBase[p]);
+   }
+   if(p === 'app/globals.css') {
+     assert.ok(bytes.toString().startsWith(mobileBase[p]),'original CSS prefix unchanged');
+     assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'), 'ce510abca902f456f38f32a1d169cd1e9c34eec77962aa793a0c82595bcb6fa9', 'only exact authorized mobile CSS');
+     bytes=Buffer.from(mobileBase[p]);
+   }
+   assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),h,p);
+ }
 });
 test('hero et barre de confiance conservent leur rendu original',()=>{
  for(const name of ['Hero','TrustBar']) assert.equal(render('components/home/Hero.tsx',name),render('components/home/Hero.tsx',name,original.sources['components/home/Hero.tsx']));

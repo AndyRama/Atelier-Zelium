@@ -4,7 +4,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
-import { navLinks } from "@/lib/site";
+import { navLinks, site } from "@/lib/site";
+
+export function phoneHref(phone: string): string | undefined {
+  if (!/^0[1-9](?:[ .-]?\d{2}){4}$/.test(phone)) return undefined;
+  return `tel:+33${phone.replace(/[ .-]/g, "").slice(1)}`;
+}
 
 export function Header() {
   const pathname = usePathname();
@@ -23,7 +28,10 @@ export function Header() {
   // Transparent et clair par-dessus le hero de l'accueil, crème dès qu'on scrolle ou sur les autres pages.
   const overHero = pathname === "/" && !scrolled && !open;
 
+  const telephone = phoneHref(site.phone);
+
   return (
+    <>
     <header
       className={`fixed inset-x-0 top-0 z-50 border-b transition-colors duration-300 ${
         overHero ? "border-transparent text-cream" : "border-line bg-cream/90 text-ink backdrop-blur"
@@ -67,7 +75,7 @@ export function Header() {
       </div>
 
       {open && (
-        <nav id="menu-mobile" aria-label="Navigation mobile" className="border-t border-line bg-cream px-6 pb-8 pt-4 text-ink lg:hidden">
+        <nav id="menu-mobile" aria-label="Navigation mobile" className="mobile-navigation overflow-y-auto border-t border-line bg-cream px-6 pb-8 pt-4 text-ink lg:hidden">
           <ul className="divide-y divide-line">
             {navLinks.map((l) => (
               <li key={l.href}>
@@ -77,14 +85,19 @@ export function Header() {
               </li>
             ))}
           </ul>
-          <Link
-            href="/#contact"
-            className="mt-6 inline-block bg-ink px-6 py-3.5 text-[11px] font-medium uppercase tracking-[0.16em] text-cream"
-          >
-            Demander un devis ↗
-          </Link>
         </nav>
       )}
     </header>
+    <nav aria-label="Actions mobiles" className="mobile-actions fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 gap-3 border-t border-line bg-cream px-4 pt-3 text-[11px] font-medium lg:hidden">
+      <Link href="/#contact" onClick={() => setOpen(false)} className="flex min-h-12 items-center justify-center rounded-md bg-ink px-3 text-cream">RDV atelier</Link>
+      {telephone ? (
+        <a href={telephone} className="flex min-h-12 items-center justify-center rounded-md border border-ink px-3 text-ink">Téléphone</a>
+      ) : (
+        <button type="button" disabled aria-label="Numéro à venir" title="Numéro à venir" className="flex min-h-12 flex-col items-center justify-center rounded-md border border-line px-3 text-ink/60">
+          Téléphone <span className="text-[10px]">{site.phone}</span>
+        </button>
+      )}
+    </nav>
+    </>
   );
 }
