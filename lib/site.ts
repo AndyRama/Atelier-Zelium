@@ -4,7 +4,7 @@ export const site = {
   tagline: "Menuiserie & agencement sur mesure",
   address: ["5 Rue de Bègles", "33800 Bordeaux"],
   district: "Quartier Nansouty — Bordeaux",
-  phone: "[À COMPLÉTER]",
+  phone: "06 ...",
   email: "[À COMPLÉTER]",
   rating: "4,9",
   reviewCount: 16,
