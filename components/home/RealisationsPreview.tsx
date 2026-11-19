@@ -9,11 +9,11 @@ export function RealisationsPreview() {
       <Container>
         <div className="flex flex-col justify-between gap-4 border-b border-line pb-8 md:flex-row md:items-end">
           <div>
-            <Eyebrow>Réalisations</Eyebrow>
+            <Eyebrow>Nos locaux</Eyebrow>
             <SectionTitle className="mt-4">Les savoir-faire de l’atelier.</SectionTitle>
           </div>
           <Link href="/realisations" className="text-[10px] font-medium uppercase tracking-[0.18em] text-body transition-colors hover:text-ink">
-            Toutes les réalisations →
+            Découvrir nos locaux →
           </Link>
         </div>
         <div className="mt-10 grid gap-x-6 gap-y-12 md:grid-cols-3">

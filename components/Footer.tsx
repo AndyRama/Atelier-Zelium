@@ -9,7 +9,7 @@ const cols = [
     links: [
       ["Savoir-faire", "/#savoir-faire"],
       ["Atelier & coworking", "/#atelier"],
-      ["Réalisations", "/realisations"],
+      ["Nos locaux", "/realisations"],
       ["L'équipe", "/#equipe"],
       ["Contact", "/#contact"],
     ],
@@ -19,7 +19,7 @@ const cols = [
     links: [
       ["Atelier à la demande", "/#atelier"],
       ["Coworking & bureaux", "/#atelier"],
-      ["Réalisations", "/realisations"],
+      ["Nos locaux", "/realisations"],
       ["Itinéraire", "/#contact"],
     ],
   },

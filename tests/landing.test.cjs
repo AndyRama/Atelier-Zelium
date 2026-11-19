@@ -36,6 +36,14 @@ test('préserve exactement les sources hors périmètre et les octets des photos
  const mobileBase = require('./fixtures/mobile-actions-base.json');
  for(const [p,h] of Object.entries(original.hashes)) if(!allowed.has(p)) {
    let bytes=fs.readFileSync(path.join(root,p));
+   if(require('./fixtures/hero-locaux-edits.json')[p]) {
+     let source=bytes.toString();
+     for(const edit of [...require('./fixtures/hero-locaux-edits.json')[p]].reverse()) {
+       assert.equal(source.split(edit.after).length,edit.count+1,'only approved hero/label edits: '+p);
+       source=source.split(edit.after).join(edit.before);
+     }
+     bytes=Buffer.from(source);
+   }
    if(require('./fixtures/photo-description-edits.json')[p]) {
      let source=bytes.toString();
      for(const edit of [...require('./fixtures/photo-description-edits.json')[p]].reverse()) {
@@ -96,7 +104,9 @@ test('préserve exactement les sources hors périmètre et les octets des photos
  }
 });
 test('hero et barre de confiance conservent leur rendu original',()=>{
- for(const name of ['Hero','TrustBar']) assert.equal(render('components/home/Hero.tsx',name),render('components/home/Hero.tsx',name,original.sources['components/home/Hero.tsx'].replace('notre atelier de la rue de Bègles','notre atelier de la rue Sainte-Cécile')));
+ let expected=original.sources['components/home/Hero.tsx'].replace('notre atelier de la rue de Bègles','notre atelier de la rue Sainte-Cécile');
+ for(const edit of require('./fixtures/hero-locaux-edits.json')['components/home/Hero.tsx']) expected=expected.split(edit.before).join(edit.after);
+ for(const name of ['Hero','TrustBar']) assert.equal(render('components/home/Hero.tsx',name),render('components/home/Hero.tsx',name,expected));
  assert.ok(fs.existsSync(path.join(root,'public/images/hero.png')),'restaurer le hero authentique manquant');
 });
 test('introduction multidisciplinaire rendue après la barre de confiance',()=>{
@@ -107,6 +117,19 @@ test('introduction multidisciplinaire rendue après la barre de confiance',()=>{
  assert.ok(html.indexOf('Un lieu pour fabriquer')<html.indexOf('Sept familles'));
 });
 module.exports={render,text,words,homepage,original};
+
+test('hero content is vertically centered and gallery navigation is named Nos locaux',()=>{
+ const hero=render('components/home/Hero.tsx','Hero');
+ assert.match(hero,/min-h-\[92svh\] items-center/);
+ assert.ok(hero.includes('/images/hero.png'));
+ const page=render('app/realisations/page.tsx','default');
+ assert.match(page,/>Nos locaux<\/h1>/);
+ const footer=render('components/Footer.tsx','Footer');
+ assert.ok(text(footer).includes('Nos locaux'));
+ assert.ok(!text(footer).includes('Réalisations'));
+ assert.ok(text(homepage()).includes('Découvrir nos locaux'));
+});
+
 
 test('six gallery cards describe the actual workshop photographs',()=>{
  const html=render('app/realisations/page.tsx','default');

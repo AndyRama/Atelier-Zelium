@@ -1,0 +1,64 @@
+{
+  "components/home/Hero.tsx": [
+    {
+      "before": "flex min-h-[92svh] items-end",
+      "after": "flex min-h-[92svh] items-center",
+      "count": 1
+    },
+    {
+      "before": "<Container className=\"pt-2\">",
+      "after": "<Container className=\"py-24 md:py-28\">",
+      "count": 1
+    }
+  ],
+  "components/home/RealisationsPreview.tsx": [
+    {
+      "before": "<Eyebrow>Réalisations</Eyebrow>",
+      "after": "<Eyebrow>Nos locaux</Eyebrow>",
+      "count": 1
+    },
+    {
+      "before": "Toutes les réalisations →",
+      "after": "Découvrir nos locaux →",
+      "count": 1
+    }
+  ],
+  "components/Footer.tsx": [
+    {
+      "before": "[\"Réalisations\", \"/realisations\"]",
+      "after": "[\"Nos locaux\", \"/realisations\"]",
+      "count": 2
+    }
+  ],
+  "lib/site.ts": [
+    {
+      "before": "{ label: \"Réalisations\", href: \"/realisations\" }",
+      "after": "{ label: \"Nos locaux\", href: \"/realisations\" }",
+      "count": 1
+    }
+  ],
+  "app/realisations/page.tsx": [
+    {
+      "before": "title: \"Réalisations\"",
+      "after": "title: \"Nos locaux\"",
+      "count": 1
+    },
+    {
+      "before": "<Eyebrow>Réalisations</Eyebrow>",
+      "after": "<Eyebrow>Nos locaux</Eyebrow>",
+      "count": 1
+    },
+    {
+      "before": "<h1 className=\"mt-5 text-[clamp(2.4rem,5vw,3.6rem)] leading-[1.05] tracking-[-0.02em]\">Le bois, pièce par pièce.</h1>",
+      "after": "<h1 className=\"mt-5 text-[clamp(2.4rem,5vw,3.6rem)] leading-[1.05] tracking-[-0.02em]\">Nos locaux</h1>",
+      "count": 1
+    }
+  ],
+  "components/ProjectsGrid.tsx": [
+    {
+      "before": "Pas encore de réalisation dans cette famille. Écrivez-nous : on a sûrement une pièce à vous montrer.",
+      "after": "Aucune photographie des locaux dans cette famille pour le moment. Contactez-nous pour découvrir les espaces.",
+      "count": 1
+    }
+  ]
+}

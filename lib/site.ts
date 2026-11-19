@@ -23,7 +23,7 @@ export const mapsDirectionsUrl = `https://www.google.com/maps/dir/?api=1&destina
 export const navLinks = [
   { label: "Savoir-faire", href: "/#savoir-faire" },
   { label: "Atelier & coworking", href: "/#atelier" },
-  { label: "Réalisations", href: "/realisations" },
+  { label: "Nos locaux", href: "/realisations" },
   { label: "L'équipe", href: "/#equipe" },
   { label: "Contact", href: "/#contact" },
 ] as const;
