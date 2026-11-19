@@ -17,6 +17,7 @@ export function ProjectCard({ project, sizes }: { project: Project; sizes?: stri
             className="object-cover"
           />
         </div>
+        <p className="mt-3 text-[10px] leading-relaxed text-muted">Photo réelle de l’atelier — illustration de ce savoir-faire.</p>
         <div className="mt-4 flex items-start justify-between text-[10px] font-medium uppercase tracking-[0.2em] text-muted">
           <span>{project.category}</span>
           <span aria-hidden className="text-sm leading-none transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5">↗</span>

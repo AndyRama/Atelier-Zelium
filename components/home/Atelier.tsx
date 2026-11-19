@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Button, Container, Eyebrow, SectionTitle } from "../ui";
 import { plans } from "@/lib/content";
 
@@ -7,16 +6,6 @@ const included = [
   "Établis, servantes, rangements et stock de chutes",
   "Accompagnement par Ben si besoin, sans jamais faire à votre place",
   "Espace bureau et coworking sur place",
-];
-
-const photos = [
-  ["production", "Production", "Tables de travail et personne dans l’atelier"],
-  ["raz", "Rez-de-chaussée", "Charpente et volume fermé au rez-de-chaussée"],
-  ["atelier", "Atelier", "Vue intérieure de l’atelier sous la charpente"],
-  ["coworking", "Coworking", "Espaces de bureaux derrière des cloisons vitrées rouges"],
-  ["exterieur", "Extérieur", "Façade et grande ouverture de l’atelier depuis la rue"],
-  ["hall", "Hall", "Hall avec escalier à gauche et ouvertures"],
-  ["premier-etage", "Premier étage", "Bureaux vitrés en hauteur sous la charpente"],
 ];
 
 export function Atelier() {
@@ -54,15 +43,6 @@ export function Atelier() {
           <div className="mt-5 grid gap-5 leading-relaxed text-cream/75 md:grid-cols-2 md:gap-12">
             <p>Au rez-de-chaussée, un parc de machines est mis à disposition, avec des établis et des espaces de stockage pour les métiers du bois, de l’acier et du fer. Les postes de travail et les rangements prennent place dans le volume de l’atelier.</p>
             <p>À l’étage, des bureaux fermés accueillent les coworkers et leurs ordinateurs, photographies, montres et dessins. La conception et la fabrication trouvent chacune leur espace, sans quitter ce lieu partagé.</p>
-          </div>
-          <p className="mt-8 text-xs text-cream/55">Photographies du lieu fournies par l’atelier — vues d’ensemble en petit format.</p>
-          <div className="mt-5 grid max-w-[42rem] grid-cols-2 gap-x-5 gap-y-6 sm:grid-cols-3 md:grid-cols-4">
-            {photos.map(([id, label, alt]) => (
-              <figure key={id} className="min-w-0">
-                <Image src={`/images/${id}.jpg`} alt={alt} width={128} height={85} sizes="128px" loading="lazy" className="h-auto w-full max-w-[128px] object-contain" />
-                <figcaption className="mt-3 text-[10px] uppercase tracking-[0.12em] text-cream/70">{label}</figcaption>
-              </figure>
-            ))}
           </div>
         </div>
 

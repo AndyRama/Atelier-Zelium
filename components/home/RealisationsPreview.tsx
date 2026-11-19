@@ -10,7 +10,7 @@ export function RealisationsPreview() {
         <div className="flex flex-col justify-between gap-4 border-b border-line pb-8 md:flex-row md:items-end">
           <div>
             <Eyebrow>Réalisations</Eyebrow>
-            <SectionTitle className="mt-4">Ce qui sort de l'atelier.</SectionTitle>
+            <SectionTitle className="mt-4">Les savoir-faire de l’atelier.</SectionTitle>
           </div>
           <Link href="/realisations" className="text-[10px] font-medium uppercase tracking-[0.18em] text-body transition-colors hover:text-ink">
             Toutes les réalisations →
@@ -21,7 +21,7 @@ export function RealisationsPreview() {
             <ProjectCard key={p.slug} project={p} />
           ))}
         </div>
-        <Note className="mt-10">Photographies d'illustration : les visuels des projets réels de l'atelier seront intégrés dès réception des photos [À COMPLÉTER].</Note>
+        <Note className="mt-10">Photographies réelles de l’atelier. Les catégories illustrent les savoir-faire et ne constituent pas des références de chantiers identifiés sur ces images.</Note>
       </Container>
     </section>
   );
