@@ -19,7 +19,7 @@ export function Hero() {
           Le sur-mesure, fait main, au cœur de Bordeaux.
         </h1>
         <p className="mt-6 max-w-[34rem] text-[17px] leading-relaxed text-cream/80">
-          Cuisines, bibliothèques, escaliers, agencements : nous dessinons et fabriquons dans notre atelier de la rue de Bègles. Et nous ouvrons nos établis à ceux qui veulent travailler le bois.
+          Cuisines, bibliothèques, escaliers, agencements : nous dessinons et fabriquons dans notre atelier de la rue Sainte-Cécile. Et nous ouvrons nos établis à ceux qui veulent travailler le bois.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <Button href="/#contact" variant="light">Demander un devis</Button>

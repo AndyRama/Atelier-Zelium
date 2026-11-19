@@ -1,0 +1,44 @@
+{
+  "lib/site.ts": [
+    {
+      "before": "address: [\"5 Rue de Bègles\", \"33800 Bordeaux\"]",
+      "after": "address: [\"19 rue Sainte-Cécile\", \"33000 Bordeaux\"]"
+    },
+    {
+      "before": "district: \"Quartier Nansouty — Bordeaux\"",
+      "after": "district: \"Bordeaux\""
+    },
+    {
+      "before": "googleUrl: \"#\", // TODO : lien de la fiche Google",
+      "after": "googleUrl: \"https://www.google.com/maps/place/Atelier+Zelium/data=!4m7!3m6!1s0xd5527eb3c73f9f9:0x14891e368ce4953c!8m2!3d44.8311808!4d-0.5857399!16s%2Fg%2F1tdmrcq3!19sChIJ-flzPOsnVQ0RPJXkjDYeiRQ\","
+    },
+    {
+      "before": "mapsQuery: \"5 Rue de Bègles 33800 Bordeaux\"",
+      "after": "mapsQuery: \"19 rue Sainte-Cécile 33000 Bordeaux\""
+    }
+  ],
+  "components/home/Hero.tsx": [
+    {
+      "before": "notre atelier de la rue de Bègles",
+      "after": "notre atelier de la rue Sainte-Cécile"
+    }
+  ],
+  "components/home/Contact.tsx": [
+    {
+      "before": "Carte : Atelier Zélium, 5 rue de Bègles, Bordeaux",
+      "after": "Carte : Atelier Zélium, 19 rue Sainte-Cécile, Bordeaux"
+    }
+  ],
+  "components/Footer.tsx": [
+    {
+      "before": "Atelier Zélium — Quartier Nansouty — Bordeaux",
+      "after": "Atelier Zélium — Bordeaux"
+    }
+  ],
+  "lib/content.ts": [
+    {
+      "before": "l'atelier, rue de Bègles",
+      "after": "l'atelier, rue Sainte-Cécile"
+    }
+  ]
+}

@@ -54,7 +54,7 @@ export function Contact() {
 
             <div className="relative aspect-[3/2] overflow-hidden border border-line bg-sand">
               <iframe
-                title="Carte : Atelier Zélium, 5 rue de Bègles, Bordeaux"
+                title="Carte : Atelier Zélium, 19 rue Sainte-Cécile, Bordeaux"
                 src={mapsEmbedUrl}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

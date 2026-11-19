@@ -88,7 +88,7 @@ export const services = [
 export const steps = [
   { title: "Écoute & relevé", text: "On vient voir, on mesure, on comprend l'usage. Un café, des questions, un carnet. C'est là que tout se décide." },
   { title: "Conception", text: "Plans, croquis, choix des essences et des finitions. Vous validez avant qu'on coupe la première planche." },
-  { title: "Fabrication", text: "Tout se passe à l'atelier, rue de Bègles : débit, assemblage, ponçage, finition. Vous pouvez passer voir." },
+  { title: "Fabrication", text: "Tout se passe à l'atelier, rue Sainte-Cécile : débit, assemblage, ponçage, finition. Vous pouvez passer voir." },
   { title: "Pose & finitions", text: "On installe, on ajuste, on nettoie. Et on repasse dans les mois qui suivent si quelque chose bouge." },
 ];
 

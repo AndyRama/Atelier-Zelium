@@ -70,7 +70,7 @@ export function Footer() {
       </Container>
       <div className="border-t border-cream/10">
         <Container className="flex flex-col gap-3 py-6 text-[10px] font-medium uppercase tracking-[0.18em] text-cream/55 md:flex-row md:justify-between">
-          <p>© {new Date().getFullYear()} Atelier Zélium — Quartier Nansouty — Bordeaux</p>
+          <p>© {new Date().getFullYear()} Atelier Zélium — Bordeaux</p>
           <p className="flex gap-6">
             <Link href="/mentions-legales" className="hover:text-cream">Mentions légales</Link>
             <Link href="/politique-de-confidentialite" className="hover:text-cream">Politique de confidentialité</Link>

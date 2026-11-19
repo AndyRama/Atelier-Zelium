@@ -1,38 +1,8 @@
-import Link from "next/link";
-import { Container, Eyebrow, Note, Stars } from "../ui";
-import { reviews } from "@/lib/content";
-import { site } from "@/lib/site";
+import { GoogleReviews } from "./GoogleReviews";
+import { Container, Note } from "../ui";
 
 export function Avis() {
-  return (
-    <section className="border-y border-line bg-sand py-20">
-      <Container>
-        <Eyebrow>Avis clients</Eyebrow>
-        <div className="mt-4 flex flex-col justify-between gap-6 md:flex-row md:items-center">
-          <div className="flex items-center gap-4">
-            <span className="font-serif text-[4.5rem] font-light leading-none">{site.rating}</span>
-            <div>
-              <Stars />
-              <p className="mt-1 text-[10px] font-medium uppercase tracking-[0.18em] text-muted">{site.reviewCount} avis sur Google</p>
-            </div>
-          </div>
-          <Link href={site.googleUrl} className="self-start border border-ink/30 px-5 py-3 text-[10px] font-medium uppercase tracking-[0.16em] transition-colors hover:border-ink hover:bg-ink hover:text-cream md:self-auto">
-            Lire la fiche Google ↗
-          </Link>
-        </div>
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
-          {reviews.map((r) => (
-            <figure key={r.title} className="border border-line bg-cream p-6">
-              <Stars className="text-xs" />
-              <h3 className="mt-4 text-lg font-normal">{r.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-body">{r.text}</p>
-            </figure>
-          ))}
-        </div>
-        <Note className="mt-6 max-w-[34rem]">Synthèse des avis publiés sur Google par les clients de l'atelier. Les citations originales seront intégrées après accord [À COMPLÉTER].</Note>
-      </Container>
-    </section>
-  );
+  return <GoogleReviews />;
 }
 
 export function Cabinet() {

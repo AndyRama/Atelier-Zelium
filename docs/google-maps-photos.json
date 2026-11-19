@@ -1,0 +1,204 @@
+{
+  "source": "https://www.google.com/maps/place/Atelier+Zelium/data=!4m7!3m6!1s0xd5527eb3c73f9f9:0x14891e368ce4953c!8m2!3d44.8311808!4d-0.5857399!16s%2Fg%2F1tdmrcq3!19sChIJ-flzPOsnVQ0RPJXkjDYeiRQ",
+  "reportedPhotoCount": 14,
+  "downloadedPhotoCount": 12,
+  "complete": false,
+  "missingCount": null,
+  "reason": "All 12 supplied photographs are present with no repeated photo IDs. One Street View thumbnail URL returned HTTP 400 exactly as supplied (thumbfov=s0). The initial reported total of 14 is not an independently enumerated gallery count. Two earlier URLs are variants of photographs in the new batch; only the best available file is retained for each.",
+  "rights": "Public availability does not establish permission to republish. Files are stored locally, not inserted into the site gallery.",
+  "photos": [
+    {
+      "file": "/images/google-maps/atelier-zelium-02.jpg",
+      "source": "https://lh3.googleusercontent.com/grass-cs/AABkmLcGWph6xXnGS2cfpQLmA8QrUSjsxtIqNxq0xwGCYEfSDFRAWxH1biqBCd-Bj5H8l-Y7YyHpMmuHndlvfjcPuKRTi60f0Vn6P4bzzOtuBqTjegqz-DRejzWiCludq08HQ_n6nwTE=w1200-h900-k-no",
+      "bytes": 1106841,
+      "sha256": "c2d0b2c330f0d4d83d1633d5ec47c2585465b0926ead1a96c429afc1bff6216f",
+      "contentType": "image/jpeg",
+      "photoId": "CIHM0ogKEICAgICaq6aWAQ",
+      "category": "all",
+      "uploadedByOwner": true,
+      "uploadDate": "2018-09-25",
+      "sourceWidth": 1200,
+      "sourceHeight": 801,
+      "alternateSources": [
+        "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QeuXolKAepMWtwA4dFuUrQiqvgzINZRmOhU8gxpcfOaMOixZ1HOEaCpiUMDcXnKawwYVbwqqyolEV3M9OchapL2LQjWajo5dPEq6vn4vVpNVZQv7TG49EWMxnvQowUrqqRPZzb=s0"
+      ]
+    },
+    {
+      "file": "/images/google-maps/atelier-zelium-03.jpg",
+      "source": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Sq_EzfWmKLXFbFNtv5to4MBb-S5a2zA_ldLi_8dChtfUGMvRv3jKaqFmkC4pbM_2XmWNBBwdvlzlLRl6Ij6RG_Fwygeww0i-M2XwSbQ8Tm5xLyIfSgnMr1WmaiDr96Uw2WIT8V=s0",
+      "photoId": "CIHM0ogKEICAgICaq6aWIQ",
+      "category": "all",
+      "uploadedByOwner": true,
+      "uploadDate": "2018-09-26",
+      "sourceWidth": 1920,
+      "sourceHeight": 1282,
+      "bytes": 922173,
+      "sha256": "b5e600f5be589aad2143596dad5c6bc5c77f9c4fb1174de0a2ed9b8c2d704f1e",
+      "contentType": "image/jpeg",
+      "alternateSources": [
+        "https://lh3.googleusercontent.com/grass-cs/AABkmLcr4zgTNOVzU4auTL9KaJX65_fSs3BOOYlPnYC_OFDP3o5Bo7YxeZ7SWJmGaOeK1u22IAh7bs7MDxf7PHTS163dMY0kvdajhDF-AbDJS2l_JzdyZKDmq7dAzaC6ra_a4LpYvQ9S=w1200-h900-k-no"
+      ]
+    },
+    {
+      "file": "/images/google-maps/atelier-zelium-04.jpg",
+      "source": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SVoTTlWBdrQ0GA_zp3b_reM3tA9LqvyNjSJ_-OIJ8OYTfXm89EhGCCL-XAM6S1ZPtY_kDUi4sGHpwmloqZaXLhid9oI5G_KZL5Gj_jCbvIJt7m8D9jUVFnmDmQhZD4dS2ev17I=s0",
+      "photoId": "CIHM0ogKEICAgID8kZz2UQ",
+      "category": "all",
+      "uploadedByOwner": true,
+      "uploadDate": "2018-09-25",
+      "sourceWidth": 1280,
+      "sourceHeight": 720,
+      "bytes": 328956,
+      "sha256": "6db7f2906ea926c66847e0f78ffb89fd05ab12f2863338c88cf95ac439ffe77e",
+      "contentType": "image/jpeg"
+    },
+    {
+      "file": "/images/google-maps/atelier-zelium-06.jpg",
+      "source": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RR13OS3Om-47VJifRlJp5qZde9rnwb0RnOKp5ZH49rNJPbRbMxzeCJYPECWy7s8G-BwYm_0jA6dvvJiM7jhioAQ4OXWdgPSt8z3yF8hqXCs9Lxxje7Gwg2lWI2H45YTKeTNPsI=s0",
+      "photoId": "CIHM0ogKEICAgID4zOuVRw",
+      "category": "all",
+      "uploadedByOwner": false,
+      "uploadDate": "2017-10-31",
+      "sourceWidth": 1000,
+      "sourceHeight": 665,
+      "bytes": 227272,
+      "sha256": "d36b39257bf78f3581e031799b2d0079aa1f54879326c5485fd3cfc1878aee01",
+      "contentType": "image/jpeg"
+    },
+    {
+      "file": "/images/google-maps/atelier-zelium-07.jpg",
+      "source": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QJ0aK5Z48073GBsjcMogtUWAGNrGt7PGkMKPb1EsxkPWXKiwh0w-ZsrZp9MqcxDlhKqruS-CZy4VHnVj1AUiwRxA3Cm-20DcgWbaZQdqzMJLkyulQ8klyeDlTYpHXaHYM6NyM=s0",
+      "photoId": "CIHM0ogKEICAgIDE3Nmodg",
+      "category": "all",
+      "uploadedByOwner": false,
+      "uploadDate": "2017-05-19",
+      "sourceWidth": 1000,
+      "sourceHeight": 665,
+      "bytes": 208614,
+      "sha256": "8e7520e03fe213de82ee014cbf4c891bc1df58fa8b74f94329713f3cc8c9d99f",
+      "contentType": "image/jpeg"
+    },
+    {
+      "file": "/images/google-maps/atelier-zelium-08.jpg",
+      "source": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Rfx3Qect_Q2vAfraI_epXAtSfJIRRKkGkB0mjBZ8sb3yQJlXpRQHzwUHlhaLNcHCM7rNf2uqO3oF4CZwa2TeMYyzzbOi0tFtJ8Mem8OVDBOKfcTBeKD4ZBoHuq0aIAdmrfI1UGUQ=s0",
+      "photoId": "CIHM0ogKEICAgID4v73s9gE",
+      "category": "all",
+      "uploadedByOwner": false,
+      "uploadDate": "2016-07-13",
+      "sourceWidth": 2988,
+      "sourceHeight": 5312,
+      "bytes": 1891180,
+      "sha256": "4ee413d62130ffa1304f087e2ebdcb7a4ce107a1e40b7093b9537453b68678e1",
+      "contentType": "image/jpeg"
+    },
+    {
+      "file": "/images/google-maps/atelier-zelium-09.jpg",
+      "source": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RPv5MxBNiRtR0wdVRca7fMfsdZFia57MEpS7pgGU1XfxwgB3I8GcKn8Gg--1IWc6497HHEm9sdckNCXEPQp1ExMWvacyOlMPx5lceAIZEDK-Lu_AJTWPnp1tu-uKuJS35JhqE=s0",
+      "photoId": "CIHM0ogKEICAgIDE3NmoTg",
+      "category": "all",
+      "uploadedByOwner": false,
+      "uploadDate": "2017-05-19",
+      "sourceWidth": 614,
+      "sourceHeight": 665,
+      "bytes": 192802,
+      "sha256": "906c5c66e43369ee9078043c505d42f38b81f31d4df6e3ac1b33f0f108d9d2d3",
+      "contentType": "image/jpeg"
+    },
+    {
+      "file": "/images/google-maps/atelier-zelium-10.jpg",
+      "source": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TFjnWAISUUNHpqTa5RdTB4KjDhSDQurtHbDMycfR03tp7h8IcnvBuJO39-ew_dtcjYJ_LUR4kvK-KQN3eQ8CKhoh9w2hRb0BAO7LwoRh9d4q4Enmqt-iEi9D5nGbuaC-Kp6-zi=s0",
+      "photoId": "CIHM0ogKEICAgIDE3NmorgE",
+      "category": "all",
+      "uploadedByOwner": false,
+      "uploadDate": "2017-05-19",
+      "sourceWidth": 532,
+      "sourceHeight": 800,
+      "bytes": 151006,
+      "sha256": "19e8139f7020ab2161f424f3c4d46b607a4e6a16021e8a27a0fa867e760c4a5b",
+      "contentType": "image/jpeg"
+    },
+    {
+      "file": "/images/google-maps/atelier-zelium-11.jpg",
+      "source": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Qkl2toDS1gONT7H3subFec0Bj58puZDHGrRV45kkKU3H_Q02zQU1Jm-qOD3kpM1xXFUur35dluJFQ2pSgDblsMH8nl-wnnwECzDMT-y_3iI7GzlGqFNEh-fxHVrJmhcmCgI83t=s0",
+      "photoId": "CIHM0ogKEICAgID4zOuVxwE",
+      "category": "all",
+      "uploadedByOwner": false,
+      "uploadDate": "2018-02-14",
+      "sourceWidth": 1000,
+      "sourceHeight": 667,
+      "bytes": 691373,
+      "sha256": "ae7eba160eb687eca664d4a52d7feef1310438cf94947e53f0b1cb18343a8d7b",
+      "contentType": "image/jpeg"
+    },
+    {
+      "file": "/images/google-maps/atelier-zelium-12.jpg",
+      "source": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RMorVtFcZP7FOASb9xTtT39iPTAU1YlvKftxhvnE52_MXY2hCUyEzqzbjaO3taI5Nn-Qu1FF4tX2P0kRhsRBosVKOvJFlZRYbEgulXcotGiPqT0zmloNNmi-cDrHmm66VqfAAYmg=s0",
+      "photoId": "CIHM0ogKEICAgIDE3Nmo1gE",
+      "category": "all",
+      "uploadedByOwner": false,
+      "uploadDate": "2017-05-19",
+      "sourceWidth": 2125,
+      "sourceHeight": 1414,
+      "bytes": 3686530,
+      "sha256": "f3c3a44deef7a3e55d62a9f818984e241dd4a6b966e33ea1bd4cb96ff46c7a8d",
+      "contentType": "image/jpeg"
+    },
+    {
+      "file": "/images/google-maps/atelier-zelium-13.jpg",
+      "source": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9T4-LjKbKpylqHmG5RB_Thxd4TyqSMtZMk34b4U4Sz17ocyfzgeBj-qFNSRqA7BP9OKsfhhAwXQndPHaQ5NYVga3vcs_AdaNjUSEjYPICvtKU8kAiJSpWusKQeoauuOpjlrWEfk=s0",
+      "photoId": "CIHM0ogKEICAgICEzY7lCA",
+      "category": "inside",
+      "uploadedByOwner": false,
+      "uploadDate": "2018-10-31",
+      "sourceWidth": 1920,
+      "sourceHeight": 1280,
+      "bytes": 702232,
+      "sha256": "61f277f795bdbad0feedd1ca5d5db2dc593862bf95c04618c817f60fe8bdea61",
+      "contentType": "image/jpeg"
+    },
+    {
+      "file": "/images/google-maps/atelier-zelium-14.jpg",
+      "source": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Tqs34aL_1vfkZ3C31OVunq625uUSvAmcX-peHo_bqjA1Q4tGfJNW7XRhc2fcWsF7FGTFcg8Dz9kXFlJpORXGSuF00l8Wdl3uqwp8Fsh90mlZDDMZ-9i2WfpE3cPtIgFP6qRwI=s0",
+      "photoId": "CIHM0ogKEICAgIDE3NmoLg",
+      "category": "inside",
+      "uploadedByOwner": false,
+      "uploadDate": "2017-05-19",
+      "sourceWidth": 532,
+      "sourceHeight": 800,
+      "bytes": 152197,
+      "sha256": "6cde64ca3af7f542d70c3b53f96369b48570f45d1cbda471b0ea6f8d2038aeef",
+      "contentType": "image/jpeg"
+    }
+  ],
+  "additionalSuppliedUrlCount": 13,
+  "additionalRequestSuccessCount": 12,
+  "additionalDistinctFileCount": 11,
+  "failures": [
+    {
+      "source": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=xO7rp_RrLFP0nY82WIaMmA&cb_client=maps_sv.tactile.gps&w=203&h=100&yaw=199.67485&pitch=0&thumbfov=s0",
+      "photoId": "xO7rp_RrLFP0nY82WIaMmA",
+      "error": "HTTP Error 400: Bad Request",
+      "status": 400
+    }
+  ],
+  "duplicates": [
+    {
+      "source": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QeuXolKAepMWtwA4dFuUrQiqvgzINZRmOhU8gxpcfOaMOixZ1HOEaCpiUMDcXnKawwYVbwqqyolEV3M9OchapL2LQjWajo5dPEq6vn4vVpNVZQv7TG49EWMxnvQowUrqqRPZzb=s0",
+      "photoId": "CIHM0ogKEICAgICaq6aWAQ",
+      "sameFile": "/images/google-maps/atelier-zelium-02.jpg"
+    }
+  ],
+  "deduplicatedVariants": [
+    {
+      "source": "https://lh3.googleusercontent.com/grass-cs/AABkmLcr4zgTNOVzU4auTL9KaJX65_fSs3BOOYlPnYC_OFDP3o5Bo7YxeZ7SWJmGaOeK1u22IAh7bs7MDxf7PHTS163dMY0kvdajhDF-AbDJS2l_JzdyZKDmq7dAzaC6ra_a4LpYvQ9S=w1200-h900-k-no",
+      "sha256": "31393e0735c3f4b20487bcdff97df310dc99508436e563e631d4670c106e6ce0",
+      "bytes": 267743,
+      "retainedFile": "/images/google-maps/atelier-zelium-03.jpg",
+      "reason": "Same photograph visually confirmed; retained the supplied higher-resolution original."
+    }
+  ],
+  "reportedCountDifference": 2,
+  "suppliedPhotoCount": 12,
+  "suppliedPhotographsComplete": true,
+  "suppliedUrlsComplete": false
+}
