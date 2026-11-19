@@ -33,7 +33,7 @@ export function ProjectsGrid() {
           ))}
         </div>
       ) : (
-        <p className="mt-16 max-w-md text-body">Pas encore de réalisation dans cette famille. Écrivez-nous : on a sûrement une pièce à vous montrer.</p>
+        <p className="mt-16 max-w-md text-body">Aucune photographie des locaux dans cette famille pour le moment. Contactez-nous pour découvrir les espaces.</p>
       )}
     </>
   );

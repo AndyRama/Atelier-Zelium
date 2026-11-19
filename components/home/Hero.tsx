@@ -4,14 +4,14 @@ import { site } from "@/lib/site";
 
 export function Hero() {
   return (
-    <section className="relative isolate flex min-h-[92svh] items-end overflow-hidden bg-ink text-cream">
+    <section className="relative isolate flex min-h-[92svh] items-center overflow-hidden bg-ink text-cream">
       <div className="absolute inset-y-0 right-0 -z-10 w-full md:w-[68%]">
         <Image src="/images/hero.png" alt="Établi de l'atelier, rabots et planches de bois en lumière rasante" fill priority sizes="(min-width: 768px) 68vw, 100vw" className="object-cover object-right" />
         <div className="absolute inset-0 bg-ink/10 md:bg-gradient-to-r md:from-ink md:via-ink/35 md:to-transparent" />
         <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-ink/60 to-transparent" />
       </div>
 
-      <Container className="pt-2">
+      <Container className="py-24 md:py-28">
         <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-cream/65">
           Menuiserie & agencement — {site.address[0]}, Bordeaux
         </p>
