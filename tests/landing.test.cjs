@@ -36,6 +36,14 @@ test('préserve exactement les sources hors périmètre et les octets des photos
  const mobileBase = require('./fixtures/mobile-actions-base.json');
  for(const [p,h] of Object.entries(original.hashes)) if(!allowed.has(p)) {
    let bytes=fs.readFileSync(path.join(root,p));
+   if(require('./fixtures/photo-description-edits.json')[p]) {
+     let source=bytes.toString();
+     for(const edit of [...require('./fixtures/photo-description-edits.json')[p]].reverse()) {
+       assert.equal(source.split(edit.after).length,2,'unique photograph-description edit: '+p);
+       source=source.replace(edit.after,edit.before);
+     }
+     bytes=Buffer.from(source);
+   }
    if(require('./fixtures/real-photo-edits.json')[p]) {
      let source=bytes.toString();
      for(const edit of [...require('./fixtures/real-photo-edits.json')[p]].reverse()) {
@@ -99,6 +107,24 @@ test('introduction multidisciplinaire rendue après la barre de confiance',()=>{
  assert.ok(html.indexOf('Un lieu pour fabriquer')<html.indexOf('Sept familles'));
 });
 module.exports={render,text,words,homepage,original};
+
+test('six gallery cards describe the actual workshop photographs',()=>{
+ const html=render('app/realisations/page.tsx','default');
+ for(const title of ['Au cœur de l’atelier','Des espaces sur deux niveaux','Un espace pour créer et photographier','La halle de fabrication','La façade de l’atelier','Un lieu ouvert sur la lumière']) assert.ok(text(html).includes(title),title);
+ for(const old of ['Cuisine en chêne massif','Bibliothèque sur tout un mur','Escalier en chêne et acier','Dressing toute hauteur en noyer','Table en chêne massif',"Agencement d'une boutique"]) assert.ok(!text(html).includes(old),old);
+ assert.ok(text(homepage()).includes('Au cœur de l’atelier'));
+});
+test('Mobilier photograph appears before the retained spaces description',()=>{
+ const html=render('components/home/Atelier.tsx','Atelier');
+ const figure=html.match(/<figure data-workshop-photo=""[\s\S]*?<\/figure>/);
+ assert.ok(figure,'large photograph added');
+ assert.ok(figure[0].includes('/images/google-maps/atelier-zelium-10.jpg'));
+ assert.ok(html.indexOf('data-workshop-photo')<html.indexOf('data-workshop-description'));
+ assert.ok(text(html).includes('Des espaces pour les outils et les idées.'));
+ assert.ok(text(html).includes('Au rez-de-chaussée, un parc de machines'));
+ assert.ok(text(html).includes('À l’étage, des bureaux fermés'));
+});
+
 
 test('petites photos retirées et histoire complète des espaces conservée',()=>{
  const html=homepage(), t=text(html);
