@@ -36,6 +36,14 @@ test('préserve exactement les sources hors périmètre et les octets des photos
  const mobileBase = require('./fixtures/mobile-actions-base.json');
  for(const [p,h] of Object.entries(original.hashes)) if(!allowed.has(p)) {
    let bytes=fs.readFileSync(path.join(root,p));
+   if(require('./fixtures/address-corrections.json')[p]) {
+   let normalizedAddress=bytes.toString();
+   for(const edit of require('./fixtures/address-corrections.json')[p] || []) {
+     assert.equal(normalizedAddress.split(edit.after).length,2,'unique confirmed address edit: '+p);
+     normalizedAddress=normalizedAddress.replace(edit.after,edit.before);
+   }
+   bytes=Buffer.from(normalizedAddress);
+   }
    if(p === 'components/Header.tsx') {
      assert.equal(crypto.createHash('sha256').update(mobileBase[p]).digest('hex'),h,'authentic Header baseline');
      let expected=mobileBase[p];
@@ -71,7 +79,7 @@ test('préserve exactement les sources hors périmètre et les octets des photos
  }
 });
 test('hero et barre de confiance conservent leur rendu original',()=>{
- for(const name of ['Hero','TrustBar']) assert.equal(render('components/home/Hero.tsx',name),render('components/home/Hero.tsx',name,original.sources['components/home/Hero.tsx']));
+ for(const name of ['Hero','TrustBar']) assert.equal(render('components/home/Hero.tsx',name),render('components/home/Hero.tsx',name,original.sources['components/home/Hero.tsx'].replace('notre atelier de la rue de Bègles','notre atelier de la rue Sainte-Cécile')));
  assert.ok(fs.existsSync(path.join(root,'public/images/hero.png')),'restaurer le hero authentique manquant');
 });
 test('introduction multidisciplinaire rendue après la barre de confiance',()=>{

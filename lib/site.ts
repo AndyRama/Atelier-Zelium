@@ -2,14 +2,14 @@
 export const site = {
   name: "Atelier Zélium",
   tagline: "Menuiserie & agencement sur mesure",
-  address: ["5 Rue de Bègles", "33800 Bordeaux"],
-  district: "Quartier Nansouty — Bordeaux",
+  address: ["19 rue Sainte-Cécile", "33000 Bordeaux"],
+  district: "Bordeaux",
   phone: "06 ...",
   email: "[À COMPLÉTER]",
   rating: "4,9",
   reviewCount: 16,
-  googleUrl: "#", // TODO : lien de la fiche Google
-  mapsQuery: "5 Rue de Bègles 33800 Bordeaux",
+  googleUrl: "https://www.google.com/maps/place/Atelier+Zelium/data=!4m7!3m6!1s0xd5527eb3c73f9f9:0x14891e368ce4953c!8m2!3d44.8311808!4d-0.5857399!16s%2Fg%2F1tdmrcq3!19sChIJ-flzPOsnVQ0RPJXkjDYeiRQ",
+  mapsQuery: "19 rue Sainte-Cécile 33000 Bordeaux",
   hours: [
     { day: "Lundi – Vendredi", value: "9h – 18h" },
     { day: "Samedi", value: "Sur rendez-vous" },
