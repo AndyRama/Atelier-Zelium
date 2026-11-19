@@ -14,7 +14,7 @@ export function SavoirFaire() {
               Le bois se choisit, se lit, se laisse sécher. On dessine au plus juste, on assemble pour que ça tienne cent ans, on ajuste sur place. Rien d'industriel : chaque pièce est faite pour un lieu précis.
             </p>
             <div className="relative mt-10 aspect-[7/10] max-w-[30rem] overflow-hidden bg-sand">
-              <Image src="/images/cuisine.jpg" alt="Façades de cuisine en chêne massif" fill sizes="(min-width: 768px) 30rem, 100vw" className="object-cover" />
+              <Image src="/images/google-maps/atelier-zelium-12.jpg" alt="Vue intérieure de l’atelier et de ses espaces de travail" fill sizes="(min-width: 768px) 30rem, 100vw" className="object-cover" />
             </div>
           </div>
 

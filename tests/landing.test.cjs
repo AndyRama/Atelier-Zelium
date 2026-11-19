@@ -36,6 +36,15 @@ test('préserve exactement les sources hors périmètre et les octets des photos
  const mobileBase = require('./fixtures/mobile-actions-base.json');
  for(const [p,h] of Object.entries(original.hashes)) if(!allowed.has(p)) {
    let bytes=fs.readFileSync(path.join(root,p));
+   if(require('./fixtures/real-photo-edits.json')[p]) {
+     let source=bytes.toString();
+     for(const edit of [...require('./fixtures/real-photo-edits.json')[p]].reverse()) {
+       if(!edit.after) continue;
+       assert.equal(source.split(edit.after).length,2,'unique real-photo replacement: '+p);
+       source=source.replace(edit.after,edit.before);
+     }
+     bytes=Buffer.from(source);
+   }
    if(require('./fixtures/address-corrections.json')[p]) {
    let normalizedAddress=bytes.toString();
    for(const edit of require('./fixtures/address-corrections.json')[p] || []) {
@@ -91,12 +100,16 @@ test('introduction multidisciplinaire rendue après la barre de confiance',()=>{
 });
 module.exports={render,text,words,homepage,original};
 
-test('sept photos réelles compactes et histoire complète des espaces',()=>{
+test('petites photos retirées et histoire complète des espaces conservée',()=>{
  const html=homepage(), t=text(html);
+ for(const image of html.matchAll(/<img[^>]+src="([^"]+)"/g)) {
+   assert.ok(image[1]==='/images/hero.png' || image[1].startsWith('/images/google-maps/'),image[1]+' must be a real photo except hero');
+ }
+ const gallery=render('app/realisations/page.tsx','default');
+ for(const image of gallery.matchAll(/<img[^>]+src="([^"]+)"/g)) assert.ok(image[1].startsWith('/images/google-maps/'),image[1]);
  for(const id of ['production','raz','atelier','coworking','exterieur','hall','premier-etage']) {
    const images=html.match(new RegExp('<img[^>]+src="/images/'+id+'\\.jpg"[^>]*>','g')) || [];
-   assert.equal(images.length,1,id);
-   assert.match(images[0],/width="128"/); assert.match(images[0],/height="85"/); assert.match(images[0],/loading="lazy"/);
+   assert.equal(images.length,0,id+' thumbnail removed');
  }
  for(const fact of ['entrepôt','charpentier','hangar de stockage','vieille charpente','quai de chargement','bureaux de conception','rez-de-chaussée','établis','stockage','bois','acier','fer','bureaux fermés','ordinateurs','photographies','montres','dessins']) assert.ok(t.includes(fact),fact);
 });

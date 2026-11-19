@@ -1,0 +1,136 @@
+{
+  "components/home/Atelier.tsx": [
+    {
+      "before": "import Image from \"next/image\";\n",
+      "after": ""
+    },
+    {
+      "before": "const photos = [\n  [\"production\", \"Production\", \"Tables de travail et personne dans l’atelier\"],\n  [\"raz\", \"Rez-de-chaussée\", \"Charpente et volume fermé au rez-de-chaussée\"],\n  [\"atelier\", \"Atelier\", \"Vue intérieure de l’atelier sous la charpente\"],\n  [\"coworking\", \"Coworking\", \"Espaces de bureaux derrière des cloisons vitrées rouges\"],\n  [\"exterieur\", \"Extérieur\", \"Façade et grande ouverture de l’atelier depuis la rue\"],\n  [\"hall\", \"Hall\", \"Hall avec escalier à gauche et ouvertures\"],\n  [\"premier-etage\", \"Premier étage\", \"Bureaux vitrés en hauteur sous la charpente\"],\n];\n\n",
+      "after": ""
+    },
+    {
+      "before": "          <p className=\"mt-8 text-xs text-cream/55\">Photographies du lieu fournies par l’atelier — vues d’ensemble en petit format.</p>\n          <div className=\"mt-5 grid max-w-[42rem] grid-cols-2 gap-x-5 gap-y-6 sm:grid-cols-3 md:grid-cols-4\">\n            {photos.map(([id, label, alt]) => (\n              <figure key={id} className=\"min-w-0\">\n                <Image src={`/images/${id}.jpg`} alt={alt} width={128} height={85} sizes=\"128px\" loading=\"lazy\" className=\"h-auto w-full max-w-[128px] object-contain\" />\n                <figcaption className=\"mt-3 text-[10px] uppercase tracking-[0.12em] text-cream/70\">{label}</figcaption>\n              </figure>\n            ))}\n          </div>\n",
+      "after": ""
+    }
+  ],
+  "components/home/Equipe.tsx": [
+    {
+      "before": "/images/equipe.jpg",
+      "after": "/images/google-maps/atelier-zelium-09.jpg"
+    },
+    {
+      "before": "Établi avec carnet de croquis, ciseaux à bois, tablier en cuir et tasse de café",
+      "after": "Vue d’un espace de travail partagé de l’atelier"
+    }
+  ],
+  "components/home/Methode.tsx": [
+    {
+      "before": "/images/methode.jpg",
+      "after": "/images/google-maps/atelier-zelium-14.jpg"
+    },
+    {
+      "before": "Mains d'un menuisier passant le rabot sur une planche de chêne",
+      "after": "Établis et structure en bois de l’atelier"
+    }
+  ],
+  "components/home/SavoirFaire.tsx": [
+    {
+      "before": "/images/cuisine.jpg",
+      "after": "/images/google-maps/atelier-zelium-12.jpg"
+    },
+    {
+      "before": "Façades de cuisine en chêne massif",
+      "after": "Vue intérieure de l’atelier et de ses espaces de travail"
+    }
+  ],
+  "components/home/Avis.tsx": [
+    {
+      "before": "/images/maa.jpg",
+      "after": "/images/google-maps/atelier-zelium-04.jpg"
+    },
+    {
+      "before": "Maquette d'architecte et plans roulés sur une table de travail",
+      "after": "Façade du lieu partagé par l’atelier et le cabinet d’architecture"
+    }
+  ],
+  "components/home/RealisationsPreview.tsx": [
+    {
+      "before": "Ce qui sort de l'atelier.",
+      "after": "Les savoir-faire de l’atelier."
+    },
+    {
+      "before": "Photographies d'illustration : les visuels des projets réels de l'atelier seront intégrés dès réception des photos [À COMPLÉTER].",
+      "after": "Photographies réelles de l’atelier. Les catégories illustrent les savoir-faire et ne constituent pas des références de chantiers identifiés sur ces images."
+    }
+  ],
+  "components/ProjectCard.tsx": [
+    {
+      "before": "        <div className=\"mt-4 flex items-start",
+      "after": "        <p className=\"mt-3 text-[10px] leading-relaxed text-muted\">Photo réelle de l’atelier — illustration de ce savoir-faire.</p>\n        <div className=\"mt-4 flex items-start"
+    }
+  ],
+  "app/realisations/page.tsx": [
+    {
+      "before": "quelques familles de projets passées par l'atelier de menuiserie Zélium à Bordeaux.",
+      "after": "les savoir-faire de l’atelier Zélium à Bordeaux, illustrés par des photographies réelles du lieu."
+    },
+    {
+      "before": "Quelques familles de projets passées par l'atelier, et la façon dont nous les abordons : le dessin, le choix de l'essence, l'assemblage, la pose.",
+      "after": "Les familles de savoir-faire de l’atelier, illustrées par des photographies réelles du lieu : espaces de travail, établis et charpente."
+    },
+    {
+      "before": "Photographies d'illustration. Les fiches seront remplacées par les projets réels de l'atelier — photos, lieux, essences et années — dès réception [À COMPLÉTER].",
+      "after": "Photographies de l’atelier issues de sa fiche Google Maps. Les catégories et descriptions présentent des exemples de savoir-faire, pas des chantiers identifiés sur ces photos."
+    }
+  ],
+  "lib/content.ts": [
+    {
+      "before": "/images/cuisine.jpg",
+      "after": "/images/google-maps/atelier-zelium-03.jpg"
+    },
+    {
+      "before": "Façades de cuisine en chêne massif avec plan de travail en pierre claire",
+      "after": "Vue générale des établis sous la charpente de l’atelier"
+    },
+    {
+      "before": "/images/bibliotheque.jpg",
+      "after": "/images/google-maps/atelier-zelium-06.jpg"
+    },
+    {
+      "before": "Bibliothèque en noyer sur toute la hauteur d'un mur",
+      "after": "Vue intérieure de l’atelier et de sa charpente"
+    },
+    {
+      "before": "/images/escalier.jpg",
+      "after": "/images/google-maps/atelier-zelium-07.jpg"
+    },
+    {
+      "before": "Escalier en chêne massif sur limon d'acier noirci",
+      "after": "Établis et espaces de travail près des ouvertures"
+    },
+    {
+      "before": "/images/dressing.jpg",
+      "after": "/images/google-maps/atelier-zelium-08.jpg"
+    },
+    {
+      "before": "Dressing en noyer avec penderies et éclairage intégré",
+      "after": "Charpente et hauteur sous toiture de l’atelier"
+    },
+    {
+      "before": "/images/table.jpg",
+      "after": "/images/google-maps/atelier-zelium-10.jpg"
+    },
+    {
+      "before": "Détail d'un assemblage à queues d'aronde sur une table en chêne",
+      "after": "Établis et structure en bois de l’atelier"
+    },
+    {
+      "before": "/images/boutique.jpg",
+      "after": "/images/google-maps/atelier-zelium-11.jpg"
+    },
+    {
+      "before": "Boutique agencée en bois avec présentoirs et rails de lumière",
+      "after": "Espace de circulation à l’intérieur de l’atelier"
+    }
+  ]
+}

@@ -13,7 +13,7 @@ export function Cabinet() {
           <div>
             <div className="aspect-[3/2] overflow-hidden bg-sand">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/maa.jpg" alt="Maquette d'architecte et plans roulés sur une table de travail" className="h-full w-full object-cover" loading="lazy" />
+              <img src="/images/google-maps/atelier-zelium-04.jpg" alt="Façade du lieu partagé par l’atelier et le cabinet d’architecture" className="h-full w-full object-cover" loading="lazy" />
             </div>
             <p className="mt-6 text-[10px] font-medium uppercase tracking-[0.2em] text-muted">Le cabinet qui partage les murs</p>
             <p className="mt-2 font-serif text-2xl font-light leading-snug">MAA – Margaux Agnès Architecte</p>
