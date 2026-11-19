@@ -6,7 +6,7 @@ export function Equipe() {
     <section id="equipe" className="scroll-mt-20 py-24 md:py-28">
       <Container className="grid items-center gap-12 md:grid-cols-[5fr_7fr] md:gap-20">
         <div className="relative aspect-[4/5] overflow-hidden">
-          <Image src="/images/google-maps/atelier-zelium-09.jpg" alt="Vue d’un espace de travail partagé de l’atelier" fill sizes="(min-width: 768px) 40vw, 100vw" className="object-cover" />
+          <Image src="/images/google-maps/atelier-zelium-09.jpg" alt="Travail en cours dans un espace de fabrication de l’atelier" fill sizes="(min-width: 768px) 40vw, 100vw" className="object-cover" />
         </div>
         <div>
           <Eyebrow>L'équipe</Eyebrow>

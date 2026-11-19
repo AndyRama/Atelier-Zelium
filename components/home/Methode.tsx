@@ -23,7 +23,7 @@ export function Methode() {
         </div>
         <figure className="self-end">
           <div className="relative aspect-[3/4] overflow-hidden">
-            <Image src="/images/google-maps/atelier-zelium-14.jpg" alt="Établis et structure en bois de l’atelier" fill sizes="(min-width: 768px) 40vw, 100vw" className="object-cover" />
+            <Image src="/images/google-maps/atelier-zelium-14.jpg" alt="Détail d’une façade ajourée aux motifs géométriques" fill sizes="(min-width: 768px) 40vw, 100vw" className="object-cover" />
           </div>
           <figcaption className="mt-3 text-[11px] text-muted">« Le bon geste, c'est celui qu'on peut répéter mille fois sans se blesser. »</figcaption>
         </figure>

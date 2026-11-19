@@ -1,5 +1,6 @@
+import Image from "next/image";
 import { Button, Container, Eyebrow, SectionTitle } from "../ui";
-import { plans } from "@/lib/content";
+import { plans, projects } from "@/lib/content";
 
 const included = [
   "Parc machines professionnel (liste précise communiquée sur demande)",
@@ -9,6 +10,7 @@ const included = [
 ];
 
 export function Atelier() {
+  const mobilierPhoto = projects.find((project) => project.category === "Mobilier");
   return (
     <section id="atelier" className="scroll-mt-20 bg-ink py-24 text-cream md:py-28">
       <Container>
@@ -38,11 +40,16 @@ export function Atelier() {
           </div>
         </div>
 
-        <div className="mt-14 border-t border-cream/15 pt-10">
-          <h3 className="text-2xl">Des espaces pour les outils et les idées.</h3>
-          <div className="mt-5 grid gap-5 leading-relaxed text-cream/75 md:grid-cols-2 md:gap-12">
-            <p>Au rez-de-chaussée, un parc de machines est mis à disposition, avec des établis et des espaces de stockage pour les métiers du bois, de l’acier et du fer. Les postes de travail et les rangements prennent place dans le volume de l’atelier.</p>
-            <p>À l’étage, des bureaux fermés accueillent les coworkers et leurs ordinateurs, photographies, montres et dessins. La conception et la fabrication trouvent chacune leur espace, sans quitter ce lieu partagé.</p>
+        <div data-workshop-spaces="" className="mt-14 grid items-center gap-8 border-t border-cream/15 pt-10 md:grid-cols-[5fr_7fr] md:gap-12">
+          <figure data-workshop-photo="" className="relative aspect-[4/5] overflow-hidden rounded-md">
+            {mobilierPhoto && <Image src={mobilierPhoto.image} alt={mobilierPhoto.alt} fill sizes="(min-width: 768px) 42vw, 100vw" className="object-cover" />}
+          </figure>
+          <div data-workshop-description="">
+            <h3 className="text-2xl">Des espaces pour les outils et les idées.</h3>
+            <div className="mt-5 grid gap-5 leading-relaxed text-cream/75">
+              <p>Au rez-de-chaussée, un parc de machines est mis à disposition, avec des établis et des espaces de stockage pour les métiers du bois, de l’acier et du fer. Les postes de travail et les rangements prennent place dans le volume de l’atelier.</p>
+              <p>À l’étage, des bureaux fermés accueillent les coworkers et leurs ordinateurs, photographies, montres et dessins. La conception et la fabrication trouvent chacune leur espace, sans quitter ce lieu partagé.</p>
+            </div>
           </div>
         </div>
 

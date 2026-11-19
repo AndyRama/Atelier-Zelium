@@ -1,0 +1,118 @@
+{
+  "lib/content.ts": [
+    {
+      "before": "title: \"Cuisine en chêne massif\"",
+      "after": "title: \"Au cœur de l’atelier\""
+    },
+    {
+      "before": "text: \"Façades en chêne aux lignes simples, plan de travail en pierre claire, rangements jusqu'au plafond.\"",
+      "after": "text: \"Plans de travail, outils et rangements se côtoient sous la mezzanine, dans un grand volume dédié à la fabrication.\""
+    },
+    {
+      "before": "alt: \"Vue générale des établis sous la charpente de l’atelier\"",
+      "after": "alt: \"Établis et rangements sous une mezzanine de l’atelier\""
+    },
+    {
+      "before": "title: \"Bibliothèque sur tout un mur\"",
+      "after": "title: \"Des espaces sur deux niveaux\""
+    },
+    {
+      "before": "text: \"Du sol au plafond, en noyer, avec des hauteurs d'étagères calculées pour les livres et les objets.\"",
+      "after": "text: \"Cloisons vitrées, charpente apparente et aménagements en bois organisent les espaces sous la toiture.\""
+    },
+    {
+      "before": "alt: \"Vue intérieure de l’atelier et de sa charpente\"",
+      "after": "alt: \"Bureaux vitrés et aménagements en bois sous la charpente\""
+    },
+    {
+      "before": "title: \"Escalier en chêne et acier\"",
+      "after": "title: \"Un espace pour créer et photographier\""
+    },
+    {
+      "before": "text: \"Marches en chêne massif sur un limon d'acier noirci : structure discrète, bois généreux.\"",
+      "after": "text: \"Un éclairage sur pied et des supports de travail prennent place dans une pièce aux murs et aux matières bruts.\""
+    },
+    {
+      "before": "alt: \"Établis et espaces de travail près des ouvertures\"",
+      "after": "alt: \"Espace de création avec éclairage de studio et supports de travail\""
+    },
+    {
+      "before": "title: \"Dressing toute hauteur en noyer\"",
+      "after": "title: \"La halle de fabrication\""
+    },
+    {
+      "before": "text: \"Des tablettes, des penderies et de la lumière intégrée, montés au millimètre sous un plafond ancien.\"",
+      "after": "text: \"Une vue d’ensemble montre les établis et les espaces de circulation sous la grande charpente du lieu.\""
+    },
+    {
+      "before": "alt: \"Charpente et hauteur sous toiture de l’atelier\"",
+      "after": "alt: \"Vue en hauteur de la halle et des postes de travail\""
+    },
+    {
+      "before": "title: \"Table en chêne massif\"",
+      "after": "title: \"La façade de l’atelier\""
+    },
+    {
+      "before": "text: \"Un plateau d'un seul tenant, des assemblages à queues d'aronde, une finition qui laisse vivre le bois.\"",
+      "after": "text: \"Une vue de l’extérieur du lieu, avec sa façade, ses ouvertures et son accès depuis la rue.\""
+    },
+    {
+      "before": "alt: \"Établis et structure en bois de l’atelier\"",
+      "after": "alt: \"Façade extérieure de l’atelier Zélium\""
+    },
+    {
+      "before": "title: \"Agencement d'une boutique\"",
+      "after": "title: \"Un lieu ouvert sur la lumière\""
+    },
+    {
+      "before": "text: \"Présentoirs, banque d'accueil et jeux de lumière : un agencement complet, livré et posé.\"",
+      "after": "text: \"Les ouvertures hautes et la structure en bois participent à la lumière et à l’atmosphère du lieu partagé.\""
+    },
+    {
+      "before": "alt: \"Espace de circulation à l’intérieur de l’atelier\"",
+      "after": "alt: \"Ouvertures hautes et parois en bois à l’intérieur du lieu\""
+    }
+  ],
+  "components/home/Atelier.tsx": [
+    {
+      "before": "import { Button,",
+      "after": "import Image from \"next/image\";\nimport { Button,"
+    },
+    {
+      "before": "import { plans }",
+      "after": "import { plans, projects }"
+    },
+    {
+      "before": "export function Atelier() {",
+      "after": "export function Atelier() {\n  const mobilierPhoto = projects.find((project) => project.category === \"Mobilier\");"
+    },
+    {
+      "before": "        <div className=\"mt-14 border-t border-cream/15 pt-10\">\n          <h3 className=\"text-2xl\">Des espaces pour les outils et les idées.</h3>\n          <div className=\"mt-5 grid gap-5 leading-relaxed text-cream/75 md:grid-cols-2 md:gap-12\">\n            <p>Au rez-de-chaussée, un parc de machines est mis à disposition, avec des établis et des espaces de stockage pour les métiers du bois, de l’acier et du fer. Les postes de travail et les rangements prennent place dans le volume de l’atelier.</p>\n            <p>À l’étage, des bureaux fermés accueillent les coworkers et leurs ordinateurs, photographies, montres et dessins. La conception et la fabrication trouvent chacune leur espace, sans quitter ce lieu partagé.</p>\n          </div>\n        </div>\n\n",
+      "after": "        <div data-workshop-spaces=\"\" className=\"mt-14 grid items-center gap-8 border-t border-cream/15 pt-10 md:grid-cols-[5fr_7fr] md:gap-12\">\n          <figure data-workshop-photo=\"\" className=\"relative aspect-[4/5] overflow-hidden rounded-md\">\n            {mobilierPhoto && <Image src={mobilierPhoto.image} alt={mobilierPhoto.alt} fill sizes=\"(min-width: 768px) 42vw, 100vw\" className=\"object-cover\" />}\n          </figure>\n          <div data-workshop-description=\"\">\n            <h3 className=\"text-2xl\">Des espaces pour les outils et les idées.</h3>\n            <div className=\"mt-5 grid gap-5 leading-relaxed text-cream/75\">\n              <p>Au rez-de-chaussée, un parc de machines est mis à disposition, avec des établis et des espaces de stockage pour les métiers du bois, de l’acier et du fer. Les postes de travail et les rangements prennent place dans le volume de l’atelier.</p>\n              <p>À l’étage, des bureaux fermés accueillent les coworkers et leurs ordinateurs, photographies, montres et dessins. La conception et la fabrication trouvent chacune leur espace, sans quitter ce lieu partagé.</p>\n            </div>\n          </div>\n        </div>\n\n"
+    }
+  ],
+  "components/home/SavoirFaire.tsx": [
+    {
+      "before": "alt=\"Vue intérieure de l’atelier et de ses espaces de travail\"",
+      "after": "alt=\"Enseigne Atelier Zélium gravée sur une façade en pierre\""
+    }
+  ],
+  "components/home/Methode.tsx": [
+    {
+      "before": "alt=\"Établis et structure en bois de l’atelier\"",
+      "after": "alt=\"Détail d’une façade ajourée aux motifs géométriques\""
+    }
+  ],
+  "components/home/Equipe.tsx": [
+    {
+      "before": "alt=\"Vue d’un espace de travail partagé de l’atelier\"",
+      "after": "alt=\"Travail en cours dans un espace de fabrication de l’atelier\""
+    }
+  ],
+  "components/home/Avis.tsx": [
+    {
+      "before": "alt=\"Façade du lieu partagé par l’atelier et le cabinet d’architecture\"",
+      "after": "alt=\"Création artistique photographiée dans un espace sombre\""
+    }
+  ]
+}
