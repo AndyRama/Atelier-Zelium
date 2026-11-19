@@ -46,6 +46,18 @@ test('préserve exactement les sources hors périmètre et les octets des photos
      assert.equal(bytes.toString(),expected,'only exact mobile Header changes');
      bytes=Buffer.from(mobileBase[p]);
    }
+   if(p === 'components/home/Avis.tsx') {
+     const before=fs.readFileSync(path.join(root,'tests/fixtures/google-reviews-Avis.base.tsx.txt'),'utf8');
+     assert.equal(crypto.createHash('sha256').update(before).digest('hex'),h,'authentic review component baseline');
+     const expected=before
+       .replace('import Link from "next/link";', 'import { GoogleReviews } from "./GoogleReviews";')
+       .replace('import { Container, Eyebrow, Note, Stars } from "../ui";', 'import { Container, Note } from "../ui";')
+       .replace('import { reviews } from "@/lib/content";\n', '')
+       .replace('import { site } from "@/lib/site";\n', '')
+       .replace(/export function Avis\(\) \{[\s\S]*?\n\}/, 'export function Avis() {\n  return <GoogleReviews />;\n}');
+     assert.equal(bytes.toString(),expected,'only Google review delegation changed; Cabinet preserved exactly');
+     bytes=Buffer.from(before);
+   }
    if(p === 'lib/site.ts') {
      assert.equal(bytes.toString(),mobileBase[p].replace('phone: "[À COMPLÉTER]"','phone: "06 ..."'),'only authorized phone placeholder');
      bytes=Buffer.from(mobileBase[p]);

@@ -1,0 +1,25 @@
+{
+  "source": "https://www.google.com/maps/place/Atelier+Zelium/data=!4m7!3m6!1s0xd5527eb3c73f9f9:0x14891e368ce4953c!8m2!3d44.8311808!4d-0.5857399!16s%2Fg%2F1tdmrcq3!19sChIJ-flzPOsnVQ0RPJXkjDYeiRQ",
+  "reportedPhotoCount": 14,
+  "downloadedPhotoCount": 2,
+  "complete": false,
+  "missingCount": 12,
+  "reason": "Only two image URLs supplied; public Google Maps displays a limited view and does not expose the complete gallery. Nearby-business images and panorama tiles were not counted as additional photos.",
+  "rights": "Public availability does not establish permission to republish. Files are stored locally, not inserted into the site gallery.",
+  "photos": [
+    {
+      "file": "/images/google-maps/atelier-zelium-01.jpg",
+      "source": "https://lh3.googleusercontent.com/grass-cs/AABkmLcr4zgTNOVzU4auTL9KaJX65_fSs3BOOYlPnYC_OFDP3o5Bo7YxeZ7SWJmGaOeK1u22IAh7bs7MDxf7PHTS163dMY0kvdajhDF-AbDJS2l_JzdyZKDmq7dAzaC6ra_a4LpYvQ9S=w1200-h900-k-no",
+      "bytes": 267743,
+      "sha256": "31393e0735c3f4b20487bcdff97df310dc99508436e563e631d4670c106e6ce0",
+      "contentType": "image/jpeg"
+    },
+    {
+      "file": "/images/google-maps/atelier-zelium-02.jpg",
+      "source": "https://lh3.googleusercontent.com/grass-cs/AABkmLcGWph6xXnGS2cfpQLmA8QrUSjsxtIqNxq0xwGCYEfSDFRAWxH1biqBCd-Bj5H8l-Y7YyHpMmuHndlvfjcPuKRTi60f0Vn6P4bzzOtuBqTjegqz-DRejzWiCludq08HQ_n6nwTE=w1200-h900-k-no",
+      "bytes": 1106841,
+      "sha256": "c2d0b2c330f0d4d83d1633d5ec47c2585465b0926ead1a96c429afc1bff6216f",
+      "contentType": "image/jpeg"
+    }
+  ]
+}
